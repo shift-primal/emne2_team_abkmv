@@ -34,6 +34,14 @@ const model = {
 		},
 	},
 	data: {
+		categories: {
+			swimming: "Svømming",
+			biking: "Sykling",
+			dancing: "Dansing",
+			boxing: "Boksing",
+			climbing: "Klatring",
+		},
+
 		activities: [
 			{
 				id: 0,
@@ -44,7 +52,7 @@ const model = {
 				duration: 15,
 				dateAdded: "01-10-2025",
 				imgURL: "",
-				category: "ute",
+				category: categories.biking,
 				comments: [
 					{
 						user: "bjarne",
@@ -62,7 +70,7 @@ const model = {
 				duration: 30,
 				dateAdded: "04-09-2025",
 				imgURL: "",
-				category: "sommer",
+				category: categories.swimming,
 				comments: [
 					{
 						user: "bjarne",
