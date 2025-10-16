@@ -9,6 +9,7 @@ const html = /* HTML */ `<div class="front-page">
 		<h2>Utforsk oppskrifter</h2>
 		<div class="hero-section"></div>
 		<div class="recipeCard-group">${generateRecipeCard("lasagne")}</div>
+		<div class="recipeCard-group">${generateRecipeCard("Kylling Tikka Masala")}</div>
 	</div>
 </div>`;
 
@@ -24,7 +25,9 @@ function generateRecipeCard(dishName) {
 	const recipe = findRecipeByName(dishName);
 
 	return /* HTML */ ` <div class="recipeCard">
-		<h3>${recipe.name}</h3>
-		<img alt="${recipe.alt}" src="${recipe.imgUrl}">
-	</div>`;
+		<img class="recipeCardImg" alt="${recipe.alt}" src="${recipe.imgUrl}">
+		<h4>${recipe.name}</h4>
+		<h5>${recipe.description}</h5>
+			
+		</div>`;
 }
