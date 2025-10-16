@@ -1,0 +1,37 @@
+:root {
+	--color-bg: #d9d9d9;
+	--color-primary: #e3e3e3;
+	--color-secondary: #2c2c2c;
+	--card-color: #fff;
+	--color-text: #1e1e1e;
+	--color-text-muted: #757575;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	margin: 0;
+	border: 0;
+	font-family: "DM Sans", sans-serif;
+	font-optical-sizing: auto;
+}
+
+#app {
+	height: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
