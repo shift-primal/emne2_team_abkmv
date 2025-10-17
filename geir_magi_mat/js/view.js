@@ -1,6 +1,6 @@
 const navBar = /* HTML */ `<nav>
 	<div></div>
-	<div id="logo">
+	<div onclick="switchPage('FrontPage')" id="logo">
 		<h1>Middags-Magi</h1>
 	</div>
 	<div><i class="fa-solid fa-bars fa-xl"></i></div>

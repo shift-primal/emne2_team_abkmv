@@ -3,10 +3,8 @@ const html = /* HTML */ `<div class="front-page">
 		<h1>Middags-Magi</h1>
 		<h2>Inspirasjon til middagslaging</h2>
 		<div class="btn-group">
-			<button
-currentPswitchPage('exploreRecipes')				onclick="switchPage('exploreRecipes')"
-				class="primary"
-			>
+			<button onclick="switchPage('exploreRecipes')"
+				class="primary">
 				Utforsk oppskrifter
 			</button>
 			<button class="secondary">Mine oppskrifter</button>
@@ -23,7 +21,7 @@ function frontPageView() {
 }
 
 function findRecipeByName(name) {
-	return recipes.find((r) => r.name.toLowerCase() === name.toLowerCase());
+	return recipes.recipes.find((r) => r.name.toLowerCase() === name.toLowerCase());
 }
 
 function generateRecipeCard(dishName) {
