@@ -1,5 +1,6 @@
 :root {
 	--color-bg: #d9d9d9;
+	--color-bg-muted: #cfcfcf;
 	--color-primary: #e3e3e3;
 	--color-secondary: #2c2c2c;
 	--card-color: #fff;
@@ -34,4 +35,30 @@ button,
 textarea,
 select {
 	font: inherit;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 6vh;
+	text-align: center;
+	background-color: var(--color-bg);
+	border-top: 2px solid var(--color-bg-muted);
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0.5rem 2rem;
+	background-color: var(--color-bg);
+	border-bottom: 2px solid var(--color-bg-muted);
+}
+
+nav > div > h1 {
+	font-size: large;
+	background-color: white;
+	padding: 0.5rem 1rem;
+	border-radius: 8px;
 }

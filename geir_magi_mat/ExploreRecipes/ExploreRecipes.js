@@ -1,6 +1,6 @@
 function exploreRecipesView() {
 	return /*HTML*/ `
-     </div class="mainContainer">
+     </div class="mainContainer">Ny side
      </div>
      `;
 }

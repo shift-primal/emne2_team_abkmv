@@ -4,3 +4,5 @@ const model = {
 		isDarkMode: false,
 	},
 };
+
+console.log(model);
