@@ -1,4 +1,4 @@
-const inventory = [
+export const inventoryModel = [
 	{
 		id: 0,
 		date: "2025-10-12",

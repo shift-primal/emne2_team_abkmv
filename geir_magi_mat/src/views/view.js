@@ -1,6 +1,14 @@
+import { model } from "../models/index.js";
+import { frontPageView } from "./FrontPageView.js";
+import { exploreRecipesView } from "./ExploreRecipesView.js";
+import { switchPage } from "../controllers/PageController.js";
+
 const navBar = /* HTML */ `<nav>
 	<div></div>
-	<div onclick="switchPage('FrontPage')" id="logo">
+	<div
+		onclick="switchPage('FrontPage')"
+		id="logo"
+	>
 		<h1>Middags-Magi</h1>
 	</div>
 	<div><i class="fa-solid fa-bars fa-xl"></i></div>
@@ -13,23 +21,17 @@ const page = () => {
 	return /* HTML */ `${navBar} ${pageHtml} ${footer}`;
 };
 
-function updateView() {
+export function updateView() {
 	document.getElementById("app").innerHTML = page();
 }
 
 function pageManager() {
-	let html = "";
-
 	switch (model.app.currentPage) {
 		case "FrontPage":
-			html = frontPageView();
-			break;
+			return frontPageView();
+		case "ExploreRecipes":
+			return exploreRecipesView();
+		default:
+			return "";
 	}
-
-	switch (model.app.currentPage) {
-		case "exploreRecipes":
-			html = exploreRecipesView();
-			break;
-	}
-	return html;
 }

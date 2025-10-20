@@ -1,5 +1,5 @@
 .explore-recipes {
-    background-color: var(--color-bg);
+	background-color: var(--color-bg);
 	text-align: center;
 	height: 100%;
 	width: 100%;
@@ -20,7 +20,7 @@ h1 {
 
 h2 {
 	font-size: 1.5rem;
-		color: rgb(69, 69, 69);
+	color: rgb(69, 69, 69);
 
 	font-weight: normal;
 }
@@ -54,7 +54,6 @@ h2 {
 	margin-bottom: 5px;
 	color: rgb(69, 69, 69);
 	font-weight: 500;
-
 }
 
 .recipeCard h5 {
