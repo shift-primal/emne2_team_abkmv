@@ -3,7 +3,7 @@ import { RecipeCard } from "./components/RecipeCard.js";
 import { switchPage } from "../controllers/PageController.js";
 import { findRecipeByName } from "../utils/filter.js";
 
-export function frontPageView() {
+export function FrontPageView() {
 	const html = /* HTML */ `<div class="front-page">
 		<div class="hero-section">
 			<h1>Middags-Magi</h1>

@@ -1,7 +1,6 @@
 import { model } from "../models/index.js";
-import { frontPageView } from "./FrontPageView.js";
-import { exploreRecipesView } from "./ExploreRecipesView.js";
-import { switchPage } from "../controllers/PageController.js";
+import { FrontPageView } from "./FrontPageView.js";
+import { ExploreRecipesView } from "./ExploreRecipesView.js";
 
 const navBar = /* HTML */ `<nav>
 	<div></div>
@@ -28,9 +27,9 @@ export function updateView() {
 function pageManager() {
 	switch (model.app.currentPage) {
 		case "FrontPage":
-			return frontPageView();
+			return FrontPageView();
 		case "ExploreRecipes":
-			return exploreRecipesView();
+			return ExploreRecipesView();
 		default:
 			return "";
 	}
