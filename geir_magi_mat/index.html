@@ -10,45 +10,16 @@
 
 		<link
 			rel="stylesheet"
-			href="./styles.css"
-		/>
-
-		<link
-			rel="stylesheet"
-			href="./FrontPage/FrontPage.css"
+			href="./assets/css/globals.css"
 		/>
 		<link
 			rel="stylesheet"
-			href="./ExploreRecipes/ExploreRecipesStyle.css"
+			href="./assets/css/FrontPageStyle.css"
 		/>
-		<script
-			src="https://kit.fontawesome.com/507a0283cc.js"
-			crossorigin="anonymous"
-		></script>
-		<script
-			defer
-			src="./js/models/AppModel.js"
-		></script>
-		<script
-			defer
-			src="./js/models/RecipesModel.js"
-		></script>
-		<script
-			defer
-			src="./js/view.js"
-		></script>
-		<script
-			defer
-			src="./ExploreRecipes/ExploreRecipes.js"
-		></script>
-		<script
-			defer
-			src="./FrontPage/FrontPage.js"
-		></script>
-		<script
-			defer
-			src="./js/controllers/PageController.js"
-		></script>
+		<link
+			rel="stylesheet"
+			href="./assets/css/ExploreRecipesStyle.css"
+		/>
 		<link
 			rel="preconnect"
 			href="https://fonts.googleapis.com"
@@ -62,9 +33,14 @@
 			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
 			rel="stylesheet"
 		/>
+		<script
+			defer
+			type="module"
+			src="./src/main.js"
+		></script>
 	</head>
 
-	<body onload="updateView()">
+	<body>
 		<div id="app"></div>
 	</body>
 </html>
