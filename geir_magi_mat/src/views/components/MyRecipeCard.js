@@ -1,5 +1,5 @@
 export function MyRecipeCard(recipe) {
-	const ingredientsFormatted = recipe.ingredients.map(ing => `${ing.ingredient}: ${ing.amount} ${ing.metric}`).join(', ');
+	const ingredientsFormatted = recipe.ingredients.map(ing => `${ing.ingredient}: ${ing.amount} ${ing.metric}`).join(' ');
 	return /* HTML */ ` <div class="myRecipeCard">
 		<img
 			class="myRecipeCardImg"

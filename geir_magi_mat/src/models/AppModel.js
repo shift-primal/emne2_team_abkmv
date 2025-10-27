@@ -1,4 +1,4 @@
 export const appModel = {
-	currentPage: "NewRecipe",
+	currentPage: "FrontPage",
 	isDarkMode: false,
 };
