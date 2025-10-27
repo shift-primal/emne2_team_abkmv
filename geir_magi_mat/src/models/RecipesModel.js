@@ -40,7 +40,7 @@ export const recipeModel = [
 		id: 2,
 		date: "2025-10-14",
 		name: "Taco",
-		imgUrl: "img/taco.jpg",
+		imgUrl: "assets/img/taco.jpg",
 		alt: "Taco med ferskt tilbehør",
 		rating: 3,
 		comment: "Verdens beste fredagsmiddag!",

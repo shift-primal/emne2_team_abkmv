@@ -15,7 +15,11 @@ export function FrontPageView() {
 				>
 					Utforsk oppskrifter
 				</button>
-				<button class="secondary">Mine oppskrifter</button>
+				<button
+					onclick="switchPage('MyRecipes')" 
+					class="secondary">
+					Mine oppskrifter
+				</button>
 			</div>
 			<h2>Utforsk oppskrifter</h2>
 			<div class="hero-section"></div>
