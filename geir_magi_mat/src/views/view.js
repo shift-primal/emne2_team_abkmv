@@ -1,6 +1,8 @@
 import { model } from "../models/index.js";
 import { FrontPageView } from "./FrontPageView.js";
 import { ExploreRecipesView } from "./ExploreRecipesView.js";
+import { NewRecipeView } from "./NewRecipeView.js";
+import { setupNewRecipePage } from "../controllers/NewRecipeController.js";
 import { MyRecipesView } from "./MyRecipesView.js";
 
 const navBar = /* HTML */ `<nav>
@@ -23,6 +25,7 @@ const page = () => {
 
 export function updateView() {
 	document.getElementById("app").innerHTML = page();
+	setupNewRecipePage();
 }
 
 function pageManager() {
@@ -31,6 +34,8 @@ function pageManager() {
 			return FrontPageView();
 		case "ExploreRecipes":
 			return ExploreRecipesView();
+		case "NewRecipe":
+			return NewRecipeView();
 		case "MyRecipes":
 			return MyRecipesView();
 		default:
