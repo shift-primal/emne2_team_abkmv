@@ -3,14 +3,14 @@ import { findRecipeByName } from "../utils/filter.js";
 import { RecipeCard } from "./components/RecipeCard.js";
 
 export function ExploreRecipesView() {
-	return /*HTML*/ `<div class="explore-recipes">
+	return /*HTML*/ `<main>
 		<div class="hero-section">
 			<h2>Utforsk oppskrifter</h2>
 				<div class="hero-section"></div>
           		${getRecipePage()}
         		${pageButtons()}
 		</div>
-	</div>`;
+	</main>`;
 }
 
 export function getRecipePage() {

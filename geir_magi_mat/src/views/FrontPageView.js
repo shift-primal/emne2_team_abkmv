@@ -4,7 +4,7 @@ import { switchPage } from "../controllers/PageController.js";
 import { findRecipeByName } from "../utils/filter.js";
 
 export function FrontPageView() {
-	const html = /* HTML */ `<div class="front-page">
+	const html = /* HTML */ `<main>
 		<div class="hero-section">
 			<h1>Middags-Magi</h1>
 			<h2>Inspirasjon til middagslaging</h2>
@@ -22,6 +22,6 @@ export function FrontPageView() {
 			<div class="recipeCard-group">${RecipeCard(findRecipeByName(model.recipes, "Lasagne"))}</div>
 			<div class="recipeCard-group">${RecipeCard(findRecipeByName(model.recipes, "Kylling Tikka Masala"))}</div>
 		</div>
-	</div>`;
+	</main>`;
 	return html;
 }
