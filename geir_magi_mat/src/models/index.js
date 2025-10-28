@@ -4,8 +4,8 @@ import { mealPlanModel } from "./MealPlanModel.js";
 import { recipeModel } from "./RecipesModel.js";
 
 export const model = {
-	app: appModel,
-	inventory: inventoryModel,
-	mealPlan: mealPlanModel,
-	recipes: recipeModel,
+    app: appModel,
+    inventory: inventoryModel,
+    mealPlan: mealPlanModel,
+    recipes: recipeModel,
 };
