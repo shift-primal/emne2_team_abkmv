@@ -21,8 +21,6 @@ export function FrontPageView() {
                 <div class="hero-section"></div>
                 <div class="recipeCard-group">
                     ${RecipeCard(findRecipeByName(model.recipes, "Lasagne"))}
-                </div>
-                <div class="recipeCard-group">
                     ${RecipeCard(findRecipeByName(model.recipes, "Kylling Tikka Masala"))}
                 </div>
             </div>

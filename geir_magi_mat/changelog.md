@@ -12,6 +12,16 @@ Changelog:
 - Refaktorert alle modell, view og controller filer til å exporte / importe dependencies.
 - Laget en `main.js`-fil som fungerer som en single entry point for applikasjonen.
 
+## 29.10.2025
+
+Changelog:
+
+- Gitt nye navn på CSS filene for å skille de bedre fra JS filer
+- Laget ferdig side for å legge til oppskrifter, ikke enda koblet opp mot database/local storage
+- Refaktorert en del CSS som var litt buggy
+- Gjort siden mer responsiv med tanke på størrelse på telefonskjerm (ikke enda for desktop)
+- Flyttet et par funksjoner til utils
+
 Info:
 
 - `updateView()` i `view.js` er den eneste funksjonen som skal endre på HTML-en (`innerHTML`), alle andre views skal kun returnere HTML, som passeres inn i pageSwitcher.

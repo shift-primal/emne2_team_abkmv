@@ -5,6 +5,7 @@
     --color-secondary: #2c2c2c;
     --card-color: #fff;
     --color-text: #1e1e1e;
+    --color-text-secondary: #eeeeee;
     --color-text-muted: #757575;
     --color-text-medium: rgb(105, 105, 105);
     --color-text-dark: rgb(69, 69, 69);
@@ -23,27 +24,20 @@
     box-sizing: border-box;
 }
 
-html {
-    height: 100%;
-}
-
 body {
-    height: 100%;
     margin: 0;
     border: 0;
     font-family: "DM Sans", sans-serif;
     font-optical-sizing: auto;
 }
 
-#app {
-    height: 100%;
-}
-
 main {
     background-color: var(--color-bg);
     text-align: center;
-    height: 100%;
     width: 100%;
+    padding: 1rem 2rem;
+
+    min-height: 84vh;
 }
 
 input,
@@ -66,6 +60,7 @@ h2 {
 }
 
 nav {
+    height: 10vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -89,32 +84,4 @@ footer {
     text-align: center;
     background-color: var(--color-bg);
     border-top: 2px solid var(--color-bg-muted);
-}
-
-.hero-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.btn-group {
-    display: flex;
-}
-
-.btn-group > button {
-    flex: 1 0 0;
-    width: 10rem;
-    height: 2.5rem;
-    margin: 4px;
-    border-radius: 14px;
-    font-weight: 300;
-    color: var(--color-text-medium);
-    border: 1px solid var(--color-text-medium);
-    background-color: transparent;
-    cursor: pointer;
-}
-
-.btn-group > button:hover {
-    background-color: rgba(0, 0, 0, 0.05);
 }
