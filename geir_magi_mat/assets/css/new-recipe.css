@@ -57,16 +57,9 @@
 }
 
 .input-with-button button {
+    flex-shrink: 0;
+    width: auto;
     padding: 0.75rem 1rem;
-    background-color: var(--color-success);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.input-with-button button:hover {
-    background-color: var(--color-success-hover);
 }
 
 #ingredients-list,
@@ -80,21 +73,6 @@
 #ingredients-list:empty,
 #steps-list:empty {
     display: none;
-}
-
-#submit-btn {
-    padding: 1rem 2rem;
-    background-color: var(--color-info);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    margin-top: 1rem;
-}
-
-#submit-btn:hover {
-    background-color: var(--color-info-hover);
 }
 
 input[type="range"] {

@@ -4,32 +4,3 @@
     align-items: center;
     justify-content: center;
 }
-
-.btn-group {
-    display: flex;
-}
-
-.btn-group > button {
-    flex: 1 0 0;
-    width: 10rem;
-    height: 2.5rem;
-    margin: 4px;
-    border-radius: 14px;
-    font-weight: 300;
-    color: var(--color-text);
-    border: 1px solid var(--color-border);
-    cursor: pointer;
-}
-
-.btn-group > .primary {
-    background-color: var(--color-primary);
-}
-
-.btn-group > .secondary {
-    background-color: var(--color-secondary);
-    color: var(--color-text-secondary);
-}
-
-.btn-group > button:hover {
-    background-color: rgba(0, 0, 0, 0.05);
-}

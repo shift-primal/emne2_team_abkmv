@@ -125,7 +125,13 @@ export function NewRecipeView() {
                                 type="text"
                                 placeholder="Løk..."
                             />
-                            <button type="button" id="add-ingredient-btn">Legg til</button>
+                            <button
+                                type="button"
+                                id="add-ingredient-btn"
+                                class="btn btn-sq btn-success"
+                            >
+                                +
+                            </button>
                         </div>
                         <ul id="ingredients-list">
                             ${recipeData.ingredients
@@ -145,7 +151,9 @@ export function NewRecipeView() {
                                 type="text"
                                 placeholder="Stek kjøttdeig..."
                             />
-                            <button type="button" id="add-step-btn">Legg til</button>
+                            <button type="button" id="add-step-btn" class="btn btn-sq btn-success">
+                                +
+                            </button>
                         </div>
                         <ol id="steps-list">
                             ${recipeData.steps
@@ -201,7 +209,9 @@ export function NewRecipeView() {
                         />
                     </div>
 
-                    <button type="button" id="submit-btn">Lagre oppskrift</button>
+                    <button type="button" id="submit-btn" class="btn btn-success">
+                        Lagre oppskrift
+                    </button>
                 </div>
             </form>
         </main>

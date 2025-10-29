@@ -36,8 +36,8 @@ main {
     text-align: center;
     width: 100%;
     padding: 1rem 2rem;
-
     min-height: 84vh;
+    max-height: 84vh;
 }
 
 input,
@@ -84,4 +84,44 @@ footer {
     text-align: center;
     background-color: var(--color-bg);
     border-top: 2px solid var(--color-bg-muted);
+}
+
+.btn {
+    margin: 4px;
+    border-radius: 4px;
+    font-weight: 300;
+    border: 1px solid var(--color-border);
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:hover {
+    filter: brightness(105%);
+}
+
+.btn-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+}
+
+.btn-secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-text-secondary);
+}
+
+.btn-success {
+    background-color: var(--color-success);
+    color: white;
+}
+
+.btn-sq {
+    aspect-ratio: 1 / 1;
 }
