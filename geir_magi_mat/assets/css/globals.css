@@ -1,71 +1,87 @@
 :root {
-	--color-bg: #d9d9d9;
-	--color-bg-muted: #cfcfcf;
-	--color-primary: #e3e3e3;
-	--color-secondary: #2c2c2c;
-	--card-color: #fff;
-	--color-text: #1e1e1e;
-	--color-text-muted: #757575;
+    --color-bg: #d9d9d9;
+    --color-bg-muted: #cfcfcf;
+    --color-primary: #e3e3e3;
+    --color-secondary: #2c2c2c;
+    --card-color: #fff;
+    --color-text: #1e1e1e;
+    --color-text-secondary: #eeeeee;
+    --color-text-muted: #757575;
+    --color-text-medium: rgb(105, 105, 105);
+    --color-text-dark: rgb(69, 69, 69);
+    --color-text-darker: rgb(45, 45, 45);
+    --color-border: rgb(162, 162, 162);
+    --color-border-light: #ccc;
+    --color-success: #4caf50;
+    --color-success-hover: #45a049;
+    --color-info: #2196f3;
+    --color-info-hover: #0b7dda;
 }
 
 *,
 *::before,
 *::after {
-	box-sizing: border-box;
-}
-
-html {
-	height: 100%;
+    box-sizing: border-box;
 }
 
 body {
-	height: 100%;
-	margin: 0;
-	border: 0;
-	font-family: "DM Sans", sans-serif;
-	font-optical-sizing: auto;
-}
-
-#app {
-	height: 100%;
+    margin: 0;
+    border: 0;
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
 }
 
 main {
-	background-color: var(--color-bg);
-	text-align: center;
-	height: 100%;
-	width: 100%;
+    background-color: var(--color-bg);
+    text-align: center;
+    width: 100%;
+    padding: 1rem 2rem;
+
+    min-height: 84vh;
 }
 
 input,
 button,
 textarea,
 select {
-	font: inherit;
+    font: inherit;
 }
 
-footer {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 6vh;
-	text-align: center;
-	background-color: var(--color-bg);
-	border-top: 2px solid var(--color-bg-muted);
+h1 {
+    font-size: 2rem;
+    color: var(--color-text);
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: var(--color-text-dark);
+    font-weight: normal;
 }
 
 nav {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 0.5rem 2rem;
-	background-color: var(--color-bg);
-	border-bottom: 2px solid var(--color-bg-muted);
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    background-color: var(--color-bg);
+    border-bottom: 2px solid var(--color-bg-muted);
 }
 
 nav > div > h1 {
-	font-size: large;
-	background-color: white;
-	padding: 0.5rem 1rem;
-	border-radius: 8px;
+    font-size: large;
+    background-color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6vh;
+    text-align: center;
+    background-color: var(--color-bg);
+    border-top: 2px solid var(--color-bg-muted);
 }
