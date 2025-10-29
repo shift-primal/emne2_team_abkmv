@@ -11,6 +11,12 @@
     margin-top: 10px;
 }
 
+.myRecipeCardImgBox{
+    height: 90px;
+    width: 90px;
+    margin-right: 10px;
+}
+
 .myRecipeCardImg {
     height: 90px;
     width: 90px;

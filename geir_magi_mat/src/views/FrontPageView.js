@@ -19,8 +19,8 @@ export function FrontPageView() {
                 </div>
                 <h2>Utforsk oppskrifter</h2>
                 <div class="recipeCard-group">
-                    ${RecipeCard(findRecipeByName(model.recipes, "Lasagne"))}
-                    ${RecipeCard(findRecipeByName(model.recipes, "Kylling Tikka Masala"))}
+                    ${RecipeCard(findRecipeByName(model.recipes, "Dhal med ovnsbakt flaskegresskar"))}
+                    ${RecipeCard(findRecipeByName(model.recipes, "Mild tofu korma med paprika, spinat og basmatiris"))}
                 </div>
             </div>
         </main>
