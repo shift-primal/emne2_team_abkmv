@@ -26,6 +26,7 @@ export function MyRecipesView() {
                 />
                 <button class="search-btn" onclick="searchRecipes()">🔍︎</button>
             </div>
+            
             <div class="recipesContainer">
                 ${model.recipes
                     .map((recipe) => {
@@ -35,6 +36,7 @@ export function MyRecipesView() {
                     .join("")}
             </div>
         </div>
+        
         <div class="btn-group">
             <button onclick="switchPage('NewRecipe')" class="btn btn-primary">
                 Legg til oppskrift

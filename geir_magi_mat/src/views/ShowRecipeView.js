@@ -1,5 +1,6 @@
 import { model } from "../models/index.js";
 import { ShowRecipeCard } from "./components/ShowRecipeCard.js";
+import { PortionCalculator } from "./components/PortionCalculator.js";
 import { updateView } from "./view.js";
 import { findRecipeByName } from "../utils/filter.js";
 
@@ -8,6 +9,7 @@ export function ShowRecipeView(){
     if (!recipe) {
         return /* html */ `<div>No recipe selected</div>`;
     }
+    const originalRecipe = model.recipes.find(r => r.id === recipe.id);
     return /* html */ `
     <div class="show-recipe">
         <div class="recipe-container">
@@ -18,13 +20,12 @@ export function ShowRecipeView(){
 
             <h5>Ingredienser</h5>
             <div class="ingredients-container">
-                <div class="portion-container">
-                    <div class="decrease-portion-btn">-</div>
-                        <div class="portion-size">1</div>
-                    <div class="increase-portion-btn">+</div>
-
-                </div>
-                ${recipe.ingredients.map(ing => `<p>${ing.amount} ${ing.metric} ${ing.ingredient}</p>`).join('')}
+                ${PortionCalculator(recipe)}
+                ${originalRecipe.ingredients.map(ing => {
+                    const factor = recipe.portionSize / originalRecipe.portionSize;
+                    const scaledAmount = typeof ing.amount === 'number' ? (ing.amount * factor).toFixed(2).replace(/\.00$/, '') : ing.amount;
+                    return `<p>${scaledAmount || ''} ${ing.metric} ${ing.ingredient}</p>`;
+                }).join('')}
             </div>
 
             <h5>Fremgangsmåte</h5>
