@@ -1,0 +1,102 @@
+.show-recipe{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg);
+    text-align: left;
+    height: 82vh;
+    width: 100%;
+    padding: 16px;
+}
+
+.recipe-container{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow-y: auto;
+    margin-bottom: 12px;
+    position: relative;
+   /* -webkit-mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 10%,
+        black 90%,
+        transparent 100%
+    );
+    mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 90%, transparent 100%);
+    */
+}
+
+.recipe-container h5 {
+    text-align: left;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.details-container{
+    margin-top: 16px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    height: 16vh;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ingredients-container{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(123, 123, 123);
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    width: 90%;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.instructions-container{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(123, 123, 123);
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    height: auto;
+    width: 90%;
+    padding: 20px;
+    text-align: left;
+}
+
+.show-recipe h5 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.portion-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    border-bottom: 1px solid rgb(123, 123, 123);
+    width: 100%;
+    margin-left: -10px;
+    margin-right: 0;
+}
+
+.decrease-portion-btn{
+    font-size: 2rem;
+}
+
+.portion-size{
+    font-size: 2rem; 
+    padding: 10px; 
+}
+
+.increase-portion-btn{
+    font-size: 2rem;
+}

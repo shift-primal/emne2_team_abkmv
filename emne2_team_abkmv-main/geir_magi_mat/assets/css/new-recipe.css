@@ -1,0 +1,81 @@
+#recipe-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#recipe-form h1 {
+    text-align: center;
+    margin: 1rem;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+.form-group > label {
+    margin-top: 0.5rem;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group > input,
+.form-group > select {
+    border: 2px solid var(--color-border-light);
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-group > input:focus,
+.form-group > select:focus {
+    outline: none;
+    border-color: var(--color-success);
+}
+
+.input-with-button {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.input-with-button input {
+    flex: 1;
+    border: 2px solid var(--color-border-light);
+    padding: 0.75rem;
+    border-radius: 4px;
+}
+
+.input-with-button button {
+    flex-shrink: 0;
+    width: auto;
+    padding: 0.75rem 1rem;
+}
+
+#ingredients-list,
+#steps-list {
+    text-align: left;
+    margin: 0.5rem 0 0 0;
+    padding-left: 1.5rem;
+    width: 100%;
+}
+
+#ingredients-list:empty,
+#steps-list:empty {
+    display: none;
+}
+
+input[type="range"] {
+    width: 100%;
+    cursor: pointer;
+}
