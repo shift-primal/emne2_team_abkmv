@@ -37,3 +37,17 @@
     padding: 0.25rem;
     gap: 1rem;
 }
+
+.showMoreBtn {
+    width: 6rem;
+    height: auto;
+    color: black;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+.showMoreBtn:hover {
+    color: white;
+}

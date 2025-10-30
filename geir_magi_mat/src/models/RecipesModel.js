@@ -362,3 +362,5 @@ export const recipeModel = [
         ],
     },
 ];
+
+export const searchResults = [];

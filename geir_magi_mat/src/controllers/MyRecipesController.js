@@ -9,6 +9,9 @@ export function searchRecipes() {
     );
     // Update the model or directly update the view with filtered recipes
     // For simplicity, we can store filtered recipes in the model
+
+    console.log(filteredRecipes)
+
     model.app.filteredRecipes = filteredRecipes;
     updateView();
 }

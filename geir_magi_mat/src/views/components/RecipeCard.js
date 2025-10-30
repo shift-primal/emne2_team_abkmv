@@ -6,6 +6,7 @@ export function RecipeCard(recipe) {
             <img class="recipeCardImg" alt="${recipe.alt}" src="${recipe.imgUrl}" />
             <h4>${recipe.name}</h4>
             <h5>${recipe.description}</h5>
+            <div class="showMoreBtn" onclick="switchPage('ShowRecipe', '${recipe.name}')">+</div>
         </div>
     `;
 }

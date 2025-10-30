@@ -8,7 +8,8 @@ function searchRecipes() {
     const filteredRecipes = model.recipes.filter((recipe) =>
         recipe.name.toLowerCase().includes(searchInput)
     );
-    model.app.filteredRecipes = filteredRecipes;
+    model.recipesModel.searchResults.push([...filteredRecipes])
+    console.log(model.recipesModel.searchResults)
     updateView();
 }
 
@@ -28,7 +29,7 @@ export function MyRecipesView() {
             <div class="recipesContainer">
                 ${model.recipes
                     .map((recipe) => {
-                        return `
+                        return /* html */ `
                         <div class="recipeCard-group">${MyRecipeCard(recipe)}</div>`;
                     })
                     .join("")}

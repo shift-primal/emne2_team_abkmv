@@ -11,6 +11,8 @@
     margin-top: 10px;
 }
 
+
+
 .myRecipeCardImgBox{
     height: 90px;
     width: 90px;
@@ -45,4 +47,24 @@
     margin-bottom: 0;
     color: rgb(105, 105, 105);
     font-weight: 300;
+}
+
+.myCardBtns{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+}
+
+.removeBtn{
+    height: 1rem;
+    width: 20px;
+    font-weight: 700;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    
+}
+
+.editBtn{
+    height: 1rem;
+    width: 1rem;
 }

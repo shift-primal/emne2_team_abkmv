@@ -12,6 +12,10 @@ export function MyRecipeCard(recipe) {
 
                 <h5>Rating: ${recipe.rating}/5 ★</h5>
             </div>
+            <div class="myCardBtns">
+                    <div class="removeBtn">X</div>
+                    <img class="editBtn" src="assets/app-img/edit.png">
+            </div>
         </div>
     `;
 }
