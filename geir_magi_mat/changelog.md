@@ -40,6 +40,6 @@ For window.X brukt i `main.js` -> **https://developer.mozilla.org/en-US/docs/Web
 
 ## 30.10.2025
 
-- Endret på funksjonen i `switchPage.js` så den passerer inn data, for å gjøre det mulig å hente data til en oppskrift når man trykker på et av oppskrift kortene
-
+- Endret på funksjonen i `PageController.js` så den passerer inn data, for å gjøre det mulig å hente data til en oppskrift når man trykker på et av oppskrift kortene
+- La til variabelen `originalRecipe` i `PageController.js` som lager en kopi av den valgte oppskriften for å endre porsjonsstørrelsen, uten at selve modellen blir endret.
 - La til `selectedRecipe` i `AppModel.js` for å kunne registrere når en oppskrift er trykket på
