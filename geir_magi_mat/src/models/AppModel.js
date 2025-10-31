@@ -1,4 +1,5 @@
 export const appModel = {
-    currentPage: "FrontPage",
+    currentPage: "FullRecipe",
     isDarkMode: false,
+    searchResults: [],
 };

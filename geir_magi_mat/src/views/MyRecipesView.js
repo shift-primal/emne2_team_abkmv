@@ -1,16 +1,20 @@
 import { model } from "../models/index.js";
-import { findRecipeByName } from "../utils/filter.js";
 import { MyRecipeCard } from "./components/MyRecipeCard.js";
-import { updateView } from "./view.js";
 
-function searchRecipes() {
-    const searchInput = document.getElementById("search-bar").value.toLowerCase();
-    const filteredRecipes = model.recipes.filter((recipe) =>
-        recipe.name.toLowerCase().includes(searchInput)
-    );
-    model.app.filteredRecipes = filteredRecipes;
-    updateView();
-}
+const renderRecipes = () => {
+    if (model.app.searchResults[0]) {
+        return model.app.searchResults
+            .map((recipe) => {
+                return /* html */ ` <div class="recipeCard-group">${MyRecipeCard(recipe)}</div> `;
+            })
+            .join("");
+    }
+    return model.recipes
+        .map((recipe) => {
+            return /* html */ ` <div class="recipeCard-group">${MyRecipeCard(recipe)}</div> `;
+        })
+        .join("");
+};
 
 export function MyRecipesView() {
     return /* html */ `
@@ -26,12 +30,7 @@ export function MyRecipesView() {
                 <button class="search-btn" onclick="searchRecipes()">🔍︎</button>
             </div>
             <div class="recipesContainer">
-                ${model.recipes
-                    .map((recipe) => {
-                        return `
-                        <div class="recipeCard-group">${MyRecipeCard(recipe)}</div>`;
-                    })
-                    .join("")}
+                ${renderRecipes()}
             </div>
         </div>
         <div class="btn-group">

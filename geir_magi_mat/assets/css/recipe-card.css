@@ -1,6 +1,6 @@
 .recipeCard {
     background-color: var(--card-color);
-    width: 40vh;
+    max-width: 100%;
     border-radius: 10px;
     padding: 8px;
     display: flex;
@@ -31,6 +31,7 @@
 }
 
 .recipeCard-group {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
