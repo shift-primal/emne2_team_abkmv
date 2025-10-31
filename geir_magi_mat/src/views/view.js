@@ -4,7 +4,7 @@ import { ExploreRecipesView } from "./ExploreRecipesView.js";
 import { NewRecipeView } from "./NewRecipeView.js";
 import { setupNewRecipePage } from "../views/NewRecipeView.js";
 import { MyRecipesView } from "./MyRecipesView.js";
-import { FullRecipeView } from "./FullRecipeView.js";
+import { ShowRecipeView } from "./ShowRecipeView.js";
 
 const navBar = /* html */ `
     <nav>
@@ -43,8 +43,8 @@ function pageManager() {
             return NewRecipeView();
         case "MyRecipes":
             return MyRecipesView();
-        case "FullRecipe":
-            return FullRecipeView();
+        case "ShowRecipe":
+            return ShowRecipeView();
         default:
             return "";
     }

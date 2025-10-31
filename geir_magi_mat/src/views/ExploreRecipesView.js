@@ -20,7 +20,7 @@ export function getRecipePage() {
             ${RecipeCard(findRecipeByName(model.recipes, "lasagne"))}
         </div>
         <div class="recipeCard-group">
-            ${RecipeCard(findRecipeByName(model.recipes, "lasagne"))}
+            ${RecipeCard(findRecipeByName(model.recipes, "kylling tikka masala"))}
         </div>
     `;
 }

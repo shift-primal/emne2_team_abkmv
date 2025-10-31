@@ -1,20 +1,15 @@
 import { model } from "../models/index.js";
 import { MyRecipeCard } from "./components/MyRecipeCard.js";
 
-const renderRecipes = () => {
-    if (model.app.searchResults[0]) {
-        return model.app.searchResults
-            .map((recipe) => {
-                return /* html */ ` <div class="recipeCard-group">${MyRecipeCard(recipe)}</div> `;
-            })
-            .join("");
-    }
-    return model.recipes
-        .map((recipe) => {
-            return /* html */ ` <div class="recipeCard-group">${MyRecipeCard(recipe)}</div> `;
-        })
-        .join("");
-};
+function searchRecipes() {
+    const searchInput = document.getElementById("search-bar").value.toLowerCase();
+    const filteredRecipes = model.recipes.filter((recipe) =>
+        recipe.name.toLowerCase().includes(searchInput)
+    );
+    model.recipesModel.searchResults.push([...filteredRecipes]);
+    console.log(model.recipesModel.searchResults);
+    updateView();
+}
 
 export function MyRecipesView() {
     return /* html */ `
@@ -29,10 +24,18 @@ export function MyRecipesView() {
                 />
                 <button class="search-btn" onclick="searchRecipes()">🔍︎</button>
             </div>
+            
             <div class="recipesContainer">
-                ${renderRecipes()}
+                ${model.recipes
+                    .map((recipe) => {
+                        return /* html */ `
+                            <div class="recipeCard-group">${MyRecipeCard(recipe)}</div>
+                        `;
+                    })
+                    .join("")}
             </div>
         </div>
+        
         <div class="btn-group">
             <button onclick="switchPage('NewRecipe')" class="btn btn-primary">
                 Legg til oppskrift
