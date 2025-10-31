@@ -1,4 +1,4 @@
-.show-recipe{
+.show-recipe {
     display: flex;
     flex-direction: column;
     background-color: var(--color-bg);
@@ -8,7 +8,7 @@
     padding: 16px;
 }
 
-.recipe-container{
+.recipe-container {
     margin-top: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -20,7 +20,7 @@
     overflow-y: auto;
     margin-bottom: 12px;
     position: relative;
-   /* -webkit-mask-image: linear-gradient(
+    /* -webkit-mask-image: linear-gradient(
         to bottom,
         transparent 0%,
         black 10%,
@@ -38,7 +38,7 @@
     margin-right: auto;
 }
 
-.details-container{
+.details-container {
     margin-top: 16px;
     margin-bottom: 10px;
     border-radius: 10px;
@@ -48,7 +48,7 @@
     margin-right: auto;
 }
 
-.ingredients-container{
+.ingredients-container {
     margin-top: 10px;
     margin-bottom: 10px;
     border: 1px solid rgb(123, 123, 123);
@@ -60,7 +60,7 @@
     text-align: left;
 }
 
-.instructions-container{
+.instructions-container {
     margin-top: 10px;
     margin-bottom: 10px;
     border: 1px solid rgb(123, 123, 123);
@@ -77,7 +77,7 @@
     font-weight: 500;
 }
 
-.portion-container{
+.portion-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,15 +88,15 @@
     margin-right: 0;
 }
 
-.decrease-portion-btn{
+.decrease-portion-btn {
     font-size: 2rem;
 }
 
-.portion-size{
-    font-size: 2rem; 
-    padding: 10px; 
+.portion-size {
+    font-size: 2rem;
+    padding: 10px;
 }
 
-.increase-portion-btn{
+.increase-portion-btn {
     font-size: 2rem;
 }

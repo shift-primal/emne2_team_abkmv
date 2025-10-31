@@ -6,8 +6,6 @@ export function searchRecipes() {
     const filteredRecipes = model.recipes.filter((recipe) =>
         recipe.name.toLowerCase().includes(searchInput)
     );
-    // Update the model or directly update the view with filtered recipes
-    // For simplicity, we can store filtered recipes in the model
 
     console.log(filteredRecipes);
 

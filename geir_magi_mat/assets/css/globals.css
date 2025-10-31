@@ -3,7 +3,7 @@
     --color-bg-muted: #cfcfcf;
     --color-primary: #e3e3e3;
     --color-secondary: #2c2c2c;
-    --card-color: #fff;
+    --color-card: #fff;
     --color-text: #1e1e1e;
     --color-text-secondary: #eeeeee;
     --color-text-muted: #757575;
@@ -38,18 +38,23 @@ main {
     padding: 1rem 2rem;
     min-height: 84vh;
     max-height: 84vh;
+    overflow-y: scroll;
+    overflox-x: hidden;
 }
 
 input,
 button,
 textarea,
-select {
+select,
+li,
+ul,
+ol {
+    color: var(--color-text);
     font: inherit;
 }
 
 h1 {
     font-size: 2rem;
-    color: var(--color-text);
     font-weight: 300;
 }
 
@@ -65,8 +70,8 @@ nav {
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem 2rem;
-    background-color: var(--color-bg);
-    border-bottom: 2px solid var(--color-bg-muted);
+    background-color: var(--color-bg-muted);
+    border-bottom: 2px solid var(--color-border);
 }
 
 nav > div > h1 {
@@ -82,8 +87,8 @@ footer {
     align-items: center;
     height: 6vh;
     text-align: center;
-    background-color: var(--color-bg);
-    border-top: 2px solid var(--color-bg-muted);
+    background-color: var(--color-bg-muted);
+    border-top: 2px solid var(--color-border);
 }
 
 .btn {
