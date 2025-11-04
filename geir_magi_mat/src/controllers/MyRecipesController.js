@@ -12,3 +12,10 @@ export function searchRecipes() {
     model.app.filteredRecipes = filteredRecipes;
     updateView();
 }
+
+export function selectRecipe(recipeIdx) {
+    // console.log("selectRecipe fired!");
+
+    model.app.selectedRecipe = model.recipes[recipeIdx];
+    switchPage("FullRecipe");
+}

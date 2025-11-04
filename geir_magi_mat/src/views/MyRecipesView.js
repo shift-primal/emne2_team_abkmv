@@ -27,9 +27,9 @@ export function MyRecipesView() {
             
             <div class="recipesContainer">
                 ${model.recipes
-                    .map((recipe) => {
+                    .map((recipe, idx) => {
                         return /* html */ `
-                            <div class="recipeCard-group">${MyRecipeCard(recipe)}</div>
+                            <div class="recipeCard-group">${MyRecipeCard(recipe, idx)}</div>
                         `;
                     })
                     .join("")}
