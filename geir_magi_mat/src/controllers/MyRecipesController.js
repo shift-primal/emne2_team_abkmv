@@ -9,7 +9,7 @@ export function searchRecipes() {
 
     console.log(filteredRecipes);
 
-    model.app.filteredRecipes = filteredRecipes;
+    model.app.searchResults = filteredRecipes;
     updateView();
 }
 

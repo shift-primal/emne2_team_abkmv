@@ -26,6 +26,7 @@
     overflow-y: auto;
     margin-bottom: 2rem;
     position: relative;
+    padding: 30px 0.5rem;
     -webkit-mask-image: linear-gradient(
         to bottom,
         transparent 0%,

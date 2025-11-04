@@ -5,14 +5,15 @@ import { NewRecipeView } from "./NewRecipeView.js";
 import { setupNewRecipePage } from "../views/NewRecipeView.js";
 import { MyRecipesView } from "./MyRecipesView.js";
 import { FullRecipeView } from "./FullRecipeView.js";
+import { navMenu } from "./NavMenuView.js";
 
 const navBar = /* html */ `
     <nav>
-        <div></div>
+        <div class="empty-placeholder" id="dont-remove-plz"></div>
         <div onclick="switchPage('FrontPage')" id="logo">
             <h1>Middags-Magi</h1>
         </div>
-        <div><i class="fa-solid fa-bars fa-xl"></i></div>
+        <div onclick="handleToggleMenu()"><i class="fa-solid fa-bars fa-xl"></i></div>
     </nav>
 `;
 
@@ -20,7 +21,7 @@ const footer = /* html */ ` <footer>© Middags-Magi</footer> `;
 
 const page = () => {
     const pageHtml = pageManager();
-    return /* html */ ` ${navBar} ${pageHtml} ${footer} `;
+    return /* html */ ` ${navBar} ${navMenu} ${pageHtml} ${footer} `;
 };
 
 export function updateView() {

@@ -1,0 +1,36 @@
+.navmenu-container {
+    background-color: var(--color-primary);
+    position: absolute;
+    right: 0;
+    transform: translateX(280px);
+    height: 100%;
+    width: 65%;
+    z-index: 10;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    padding: 7rem 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding-left: 3rem;
+    transition: all 0.3s ease;
+}
+
+.navmenu-container h2 {
+    margin-bottom: 2rem;
+}
+
+.navmenu-container > ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 0;
+}
+
+.navmenu-container li {
+    font-size: large;
+}
+
+.navmenu-container a {
+    color: var(--color-text-link);
+}

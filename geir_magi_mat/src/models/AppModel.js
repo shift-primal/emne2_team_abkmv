@@ -3,4 +3,6 @@ export const appModel = {
     isDarkMode: false,
     selectedRecipe: null,
     adjustedPortionSize: null,
+    navMenuOpen: false,
+    searchResults: [],
 };
