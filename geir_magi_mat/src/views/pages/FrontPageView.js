@@ -1,6 +1,6 @@
-import { model } from "../models/index.js";
-import { RecipeCard } from "./components/RecipeCard.js";
-import { findRecipeByName } from "../utils/filter.js";
+import { model } from "../../models/index.js";
+import { RecipeCard } from "../components/RecipeCard.js";
+import { findRecipeByName } from "../../utils/filter.js";
 
 export function FrontPageView() {
     const html = /* html */ `
@@ -9,12 +9,10 @@ export function FrontPageView() {
                 <h1>Middags-Magi</h1>
                 <h2>Inspirasjon til middagslaging</h2>
                 <div class="btn-group">
-                    <button onclick="switchPage('ExploreRecipes')" class="btn btn-primary">
+                    <a href="/explore-recipes" data-link class="btn btn-primary">
                         Utforsk oppskrifter
-                    </button>
-                    <button onclick="switchPage('MyRecipes')" class="btn btn-secondary">
-                        Mine oppskrifter
-                    </button>
+                    </a>
+                    <a href="/my-recipes" data-link class="btn btn-primary">Mine oppskrifter</a>
                 </div>
                 <h2>Utforsk oppskrifter</h2>
                 <div class="recipeCard-group">

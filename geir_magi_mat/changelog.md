@@ -51,3 +51,7 @@ For window.X brukt i `main.js` -> **https://developer.mozilla.org/en-US/docs/Web
 - System som displayer stjerner (inkl halve stjerner) basert på rating.
 - Lagt til Nav meny som man kan åpne & lukke
 - Refaktor... ^^
+
+## 05.11.2025
+
+- Lagt til routing, flytta updateView og switchPage fra `main.js` -> `router.js`

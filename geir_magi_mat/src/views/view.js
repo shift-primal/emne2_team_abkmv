@@ -1,11 +1,11 @@
 import { model } from "../models/index.js";
-import { FrontPageView } from "./FrontPageView.js";
-import { ExploreRecipesView } from "./ExploreRecipesView.js";
-import { NewRecipeView } from "./NewRecipeView.js";
-import { setupNewRecipePage } from "../views/NewRecipeView.js";
-import { MyRecipesView } from "./MyRecipesView.js";
-import { FullRecipeView } from "./FullRecipeView.js";
-import { navMenu } from "./NavMenuView.js";
+import { FrontPageView } from "./pages/FrontPageView.js";
+import { ExploreRecipesView } from "./pages/ExploreRecipesView.js";
+import { NewRecipeView } from "./pages/NewRecipeView.js";
+import { MyRecipesView } from "./pages/MyRecipesView.js";
+import { FullRecipeView } from "./pages/ShowRecipeView.js";
+import { navMenu } from "./ui/NavMenuView.js";
+import { SuggestRecipeView } from "./pages/SuggestRecipeView.js";
 
 const navBar = /* html */ `
     <nav>
@@ -46,6 +46,8 @@ function pageManager() {
             return MyRecipesView();
         case "FullRecipe":
             return FullRecipeView();
+        case "SuggestRecipe":
+            return SuggestRecipeView();
         default:
             return "";
     }

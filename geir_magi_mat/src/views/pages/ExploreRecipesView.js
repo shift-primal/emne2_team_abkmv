@@ -1,6 +1,6 @@
-import { model } from "../models/index.js";
-import { findRecipeByName } from "../utils/filter.js";
-import { RecipeCard } from "./components/RecipeCard.js";
+import { model } from "../../models/index.js";
+import { findRecipeByName } from "../../utils/filter.js";
+import { RecipeCard } from "../components/RecipeCard.js";
 
 export function ExploreRecipesView() {
     return /* html */ `

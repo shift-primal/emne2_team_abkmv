@@ -12,9 +12,9 @@ export const navMenu = /* html */ `
     <div class="navmenu-container" id="navmenu">
         <h2>Navigasjon</h2>
         <ul>
-            <li><a href="#">Mine Oppskrifter</a></li>
-            <li><a href="#">Utforsk Oppskrifter</a></li>
-            <li><a href="#">Innstillinger</a></li>
+            <li><a href="/my-recipes" data-link>Mine Oppskrifter</a></li>
+            <li><a href="/explore-recipes" data-link>Utforsk Oppskrifter</a></li>
+            <li><a href="#" data-link>Innstillinger</a></li>
         </ul>
     </div>
 `;
