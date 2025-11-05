@@ -1,6 +1,5 @@
 import { model } from "../models/index.js";
 import { RecipeCard } from "./components/RecipeCard.js";
-import { switchPage } from "../controllers/PageController.js";
 import { findRecipeByName } from "../utils/filter.js";
 
 export function FrontPageView() {

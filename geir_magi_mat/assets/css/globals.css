@@ -5,6 +5,7 @@
     --color-secondary: #2c2c2c;
     --color-card: #fff;
     --color-text: #1e1e1e;
+    --color-text-link: #1976d2;
     --color-text-secondary: #eeeeee;
     --color-text-muted: #757575;
     --color-text-medium: rgb(105, 105, 105);
@@ -31,13 +32,18 @@ body {
     font-optical-sizing: auto;
 }
 
+#app {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
 main {
     background-color: var(--color-bg);
     text-align: center;
     width: 100%;
-    padding: 1rem 2rem;
-    min-height: 84vh;
-    max-height: 84vh;
+    height: 100%;
+    padding: 11vh 2rem;
     overflow-y: scroll;
     overflox-x: hidden;
 }
@@ -62,33 +68,6 @@ h2 {
     font-size: 1.5rem;
     color: var(--color-text-dark);
     font-weight: normal;
-}
-
-nav {
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem 2rem;
-    background-color: var(--color-bg-muted);
-    border-bottom: 2px solid var(--color-border);
-}
-
-nav > div > h1 {
-    font-size: large;
-    background-color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-}
-
-footer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 6vh;
-    text-align: center;
-    background-color: var(--color-bg-muted);
-    border-top: 2px solid var(--color-border);
 }
 
 .btn {
