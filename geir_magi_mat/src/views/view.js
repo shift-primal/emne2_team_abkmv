@@ -3,17 +3,18 @@ import { FrontPageView } from "./FrontPageView.js";
 import { ExploreRecipesView } from "./ExploreRecipesView.js";
 import { NewRecipeView } from "./NewRecipeView.js";
 import { setupNewRecipePage } from "../views/NewRecipeView.js";
-import { MyRecipesView } from "./MyRecipesView.js";
-import { ShowRecipeView } from "./ShowRecipeView.js";
+import { myRecipesView } from "./MyRecipesView.js";
 import { FullRecipeView } from "./FullRecipeView.js";
+import { editRecipeView } from "./EditRecipeView.js";
+import { navMenu } from "./NavMenuView.js";
 
 const navBar = /* html */ `
     <nav>
-        <div></div>
+        <div class="empty-placeholder" id="dont-remove-plz"></div>
         <div onclick="switchPage('FrontPage')" id="logo">
             <h1>Middags-Magi</h1>
         </div>
-        <div><i class="fa-solid fa-bars fa-xl"></i></div>
+        <div onclick="handleToggleMenu()"><i class="fa-solid fa-bars fa-xl"></i></div>
     </nav>
 `;
 
@@ -21,7 +22,7 @@ const footer = /* html */ ` <footer>© Middags-Magi</footer> `;
 
 const page = () => {
     const pageHtml = pageManager();
-    return /* html */ ` ${navBar} ${pageHtml} ${footer} `;
+    return /* html */ ` ${navBar} ${navMenu} ${pageHtml} ${footer} `;
 };
 
 export function updateView() {
@@ -42,12 +43,12 @@ function pageManager() {
             return ExploreRecipesView();
         case "NewRecipe":
             return NewRecipeView();
-        case "MyRecipes":
-            return MyRecipesView();
+            case "MyRecipes":
+            return myRecipesView();
         case "FullRecipe":
             return FullRecipeView();
-        case "ShowRecipe":
-            return ShowRecipeView();
+        case "EditRecipe":
+            return editRecipeView();
         default:
             return "";
     }

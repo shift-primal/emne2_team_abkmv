@@ -1,17 +1,19 @@
 import { model } from "../models/index.js";
 import { MyRecipeCard } from "./components/MyRecipeCard.js";
 
-function searchRecipes() {
-    const searchInput = document.getElementById("search-bar").value.toLowerCase();
-    const filteredRecipes = model.recipes.filter((recipe) =>
-        recipe.name.toLowerCase().includes(searchInput)
-    );
-    model.recipesModel.searchResults.push([...filteredRecipes]);
-    console.log(model.recipesModel.searchResults);
-    updateView();
+function displayRecipes() {
+    const recipeData = model.app.searchResults.length > 1 ? model.app.searchResults : model.recipes;
+
+    console.log(recipeData);
+
+    return recipeData
+        .map((recipe, idx) => {
+            return /* html */ ` <div class="recipeCard-group">${MyRecipeCard(recipe, idx)}</div> `;
+        })
+        .join("");
 }
 
-export function MyRecipesView() {
+export function myRecipesView() {
     return /* html */ `
         <main class="my-recipes-view">
             <h2>Mine oppskrifter</h2>
@@ -24,23 +26,15 @@ export function MyRecipesView() {
                 />
                 <button class="search-btn" onclick="searchRecipes()">🔍︎</button>
             </div>
-            
-            <div class="recipesContainer">
-                ${model.recipes
-                    .map((recipe) => {
-                        return /* html */ `
-                            <div class="recipeCard-group">${MyRecipeCard(recipe)}</div>
-                        `;
-                    })
-                    .join("")}
+
+            <div class="recipesContainer">${displayRecipes()}</div>
+
+            <div class="btn-group">
+                <button onclick="switchPage('NewRecipe')" class="btn btn-primary">
+                    Legg til oppskrift
+                </button>
+                <button class="btn btn-secondary">Anbefal oppskrift</button>
             </div>
-        </div>
-        
-        <div class="btn-group">
-            <button onclick="switchPage('NewRecipe')" class="btn btn-primary">
-                Legg til oppskrift
-            </button>
-            <button class="btn btn-secondary">Anbefal oppskrift</button>
         </main>
     `;
 }

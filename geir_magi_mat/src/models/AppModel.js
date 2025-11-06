@@ -1,5 +1,8 @@
 export const appModel = {
-    currentPage: "FullRecipe",
+    currentPage: "MyRecipes",
     isDarkMode: false,
     selectedRecipe: null,
+    adjustedPortionSize: null,
+    navMenuOpen: false,
+    searchResults: [],
 };

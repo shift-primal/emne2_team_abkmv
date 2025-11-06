@@ -43,3 +43,16 @@ For window.X brukt i `main.js` -> **https://developer.mozilla.org/en-US/docs/Web
 - Endret på funksjonen i `PageController.js` så den passerer inn data, for å gjøre det mulig å hente data til en oppskrift når man trykker på et av oppskrift kortene
 - La til variabelen `originalRecipe` i `PageController.js` som lager en kopi av den valgte oppskriften for å endre porsjonsstørrelsen, uten at selve modellen blir endret.
 - La til `selectedRecipe` i `AppModel.js` for å kunne registrere når en oppskrift er trykket på
+
+## 04.11.2025
+
+- Fullført `FullRecipeView.js`, så man nå kan se hele oppskrifter
+- Implementert ferdig PortionCalculator
+- System som displayer stjerner (inkl halve stjerner) basert på rating.
+- Lagt til Nav meny som man kan åpne & lukke
+- Refaktor... ^^
+
+## 05.11.2025
+
+- La til `removeMyRecipe` i `MyRecipesController.js`, for å kunne slette oppskrifter fra modellen. Etter hvert må vi implementere et bruker array hvor vi kan lagre oppskrifter til en spesifikk bruker, nå sletter denne funksjonen globale opprskrifter.
+- La til `editMyRecipe` i `MyRecipesController.js`, for å kunne redigere oppskrifter fra modellen
