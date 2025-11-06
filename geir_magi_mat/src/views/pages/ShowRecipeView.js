@@ -1,7 +1,7 @@
 import { model } from "../../models/index.js";
 import { PortionCalculator } from "../components/PortionCalculator.js";
 
-export function FullRecipeView() {
+export function ShowRecipeView() {
     const originalRecipe = model.app.selectedRecipe;
 
     if (!originalRecipe) {

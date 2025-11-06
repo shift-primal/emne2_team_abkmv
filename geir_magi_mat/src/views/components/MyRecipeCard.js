@@ -1,10 +1,10 @@
 import { formatNameToId } from "../../utils/format.js";
 
-export function MyRecipeCard(recipe, recipeIdx) {
+export function MyRecipeCard(recipe) {
     const id = formatNameToId(recipe.name);
 
     return /* html */ `
-        <div class="myRecipeCard" id="${id}" onclick="selectRecipe(${recipeIdx})">
+        <a class="myRecipeCard" href="/recipe/${id}" data-link>
             <div class="myRecipeCardImgBox">
                 <img class="myRecipeCardImg" alt="${recipe.alt}" src="${recipe.imgUrl}" />
             </div>
@@ -18,6 +18,6 @@ export function MyRecipeCard(recipe, recipeIdx) {
                 <div class="removeBtn">X</div>
                 <img class="editBtn" src="assets/app-img/edit.png" />
             </div>
-        </div>
+        </a>
     `;
 }
