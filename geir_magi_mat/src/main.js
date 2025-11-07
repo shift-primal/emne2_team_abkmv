@@ -1,5 +1,3 @@
-import { updateView } from "./views/view.js";
-import { switchPage } from "./controllers/PageController.js";
 import { searchRecipes, selectRecipe, editMyRecipe } from "./controllers/MyRecipesController.js";
 import { decreasePortion, increasePortion } from "./controllers/PortionController.js";
 import { handleToggleMenu } from "./controllers/NavMenuController.js";
@@ -11,8 +9,13 @@ import {
     addNewIngredient,
     addNewStep,
 } from "./controllers/EditRecipeController.js";
+import { searchRecipes, selectRecipe } from "./controllers/MyRecipesController.js";
+import { decreasePortion, increasePortion } from "./controllers/PortionController.js";
+import { handleToggleMenu } from "./controllers/NavMenuController.js";
+import { initRouter, navigate } from "./router.js";
 
-window.switchPage = switchPage;
+window.navigate = navigate;
+
 window.searchRecipes = searchRecipes;
 window.decreasePortion = decreasePortion;
 window.increasePortion = increasePortion;
@@ -27,4 +30,4 @@ window.cancelEdit = cancelEdit;
 window.addNewIngredient = addNewIngredient;
 window.addNewStep = addNewStep;
 
-updateView();
+initRouter();

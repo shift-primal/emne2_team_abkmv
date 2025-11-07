@@ -135,3 +135,8 @@ input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
 }
+
+a {
+    color: inherit;
+    text-decoration: none;
+}

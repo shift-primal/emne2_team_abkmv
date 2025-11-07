@@ -54,5 +54,8 @@ For window.X brukt i `main.js` -> **https://developer.mozilla.org/en-US/docs/Web
 
 ## 05.11.2025
 
-- La til `removeMyRecipe` i `MyRecipesController.js`, for å kunne slette oppskrifter fra modellen. Etter hvert må vi implementere et bruker array hvor vi kan lagre oppskrifter til en spesifikk bruker, nå sletter denne funksjonen globale opprskrifter.
-- La til `editMyRecipe` i `MyRecipesController.js`, for å kunne redigere oppskrifter fra modellen
+- Lagt til routing, flytta updateView og switchPage fra `main.js` -> `router.js`
+
+## 06.11.2025
+
+- Adda dynamic routing for forskjellige oppskrifter. (Mer info i comments -> `router.js`)

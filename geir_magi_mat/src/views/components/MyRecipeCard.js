@@ -4,8 +4,11 @@ import { updateView } from "../view.js";
 export function MyRecipeCard(recipe, recipeIdx) {
     const id = formatNameToId(recipe.name);
 
+export function MyRecipeCard(recipe) {
+    const id = formatNameToId(recipe.name);
+
     return /* html */ `
-        <div class="myRecipeCard" id="${id}" onclick="selectRecipe(${recipeIdx})">
+        <a class="myRecipeCard" href="/recipe/${id}" data-link>
             <div class="myRecipeCardImgBox">
                 <img class="myRecipeCardImg" alt="${recipe.alt}" src="${recipe.imgUrl}" />
             </div>
@@ -28,6 +31,6 @@ export function MyRecipeCard(recipe, recipeIdx) {
                     src="assets/app-img/edit.png"
                 />
             </div>
-        </div>
+        </a>
     `;
 }
