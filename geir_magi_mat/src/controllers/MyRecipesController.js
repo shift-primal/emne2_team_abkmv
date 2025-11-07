@@ -18,7 +18,8 @@ export function searchRecipes() {
 }
 
 export function selectRecipe(recipeIdx) {
-    // console.log("selectRecipe fired!");
+    const recipeId = model.app.selectedRecipe;
+    console.log("Selected recipe ID:", recipeId, "Index:", recipeIdx);
 
     setSelectedRecipe(recipeIdx);
     switchPage("FullRecipe");
@@ -32,7 +33,7 @@ export function removeMyRecipe(recipeIdx) {
     updateView();
 }
 
-export function editMyRecipe(recipeIdx){
+export function editMyRecipe(recipeIdx) {
     setSelectedRecipe(recipeIdx);
     switchPage("EditRecipe");
 }

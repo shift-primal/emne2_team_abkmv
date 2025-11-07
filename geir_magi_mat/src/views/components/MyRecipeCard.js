@@ -16,10 +16,18 @@ export function MyRecipeCard(recipe, recipeIdx) {
                 <h5>Rating: ${recipe.rating}/5 ★</h5>
             </div>
             <div class="myCardBtns">
-                <div onclick="event.stopPropagation(); removeMyRecipe(${recipeIdx})" class="removeBtn">X</div>
-                <img onclick="event.stopPropagation(); editMyRecipe(${recipeIdx})" class="editBtn" src="assets/app-img/edit.png" />
+                <div
+                    onclick="event.stopPropagation(); removeMyRecipe(${recipeIdx})"
+                    class="removeBtn"
+                >
+                    X
+                </div>
+                <img
+                    onclick="event.stopPropagation(); editMyRecipe(${recipeIdx})"
+                    class="editBtn"
+                    src="assets/app-img/edit.png"
+                />
             </div>
         </div>
     `;
 }
-    
