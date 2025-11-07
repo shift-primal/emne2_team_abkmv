@@ -8,7 +8,7 @@ function displayRecipes() {
 
     return recipeData
         .map((recipe, idx) => {
-            return /* html */ ` <div class="recipeCard-group">${MyRecipeCard(recipe)}</div> `;
+            return /* html */ ` <div class="recipeCard-group">${MyRecipeCard(recipe, idx)}</div> `;
         })
         .join("");
 }

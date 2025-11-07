@@ -10,6 +10,8 @@
     text-align: left;
     border: 0.1px solid rgb(162, 162, 162);
     margin-top: 10px;
+    position: relative;
+    z-index: 10;
 }
 
 .myRecipeCardImgBox {
@@ -50,19 +52,14 @@
 
 .myCardBtns {
     display: flex;
-    flex-direction: column;
-    margin-left: auto;
+    gap: 0.75rem;
+    position: absolute;
+    right: 5%;
+    bottom: 20%;
+    transform: translateY(50%);
+    z-index: 100;
 }
 
-.removeBtn {
-    height: 1rem;
-    width: 20px;
-    font-weight: 700;
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-
-.editBtn {
-    height: 1rem;
-    width: 1rem;
+.myRecipeCard > a {
+    border: 2px solid red;
 }

@@ -1,5 +1,5 @@
-import { model } from "../models/index.js";
-import { PortionCalculator } from "./components/PortionCalculator.js";
+import { model } from "../../models/index.js";
+import { PortionCalculator } from "../components/PortionCalculator.js";
 
 export function FullRecipeView() {
     const originalRecipe = model.app.selectedRecipe;

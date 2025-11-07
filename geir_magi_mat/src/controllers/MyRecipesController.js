@@ -1,5 +1,6 @@
 import { model } from "../models/index.js";
 import { updateView } from "../views/view.js";
+import { switchPage } from "./PageController.js";
 
 function setSelectedRecipe(recipeIdx) {
     model.app.selectedRecipe = model.recipes[recipeIdx];
@@ -18,11 +19,8 @@ export function searchRecipes() {
 }
 
 export function selectRecipe(recipeIdx) {
-    const recipeId = model.app.selectedRecipe;
-    console.log("Selected recipe ID:", recipeId, "Index:", recipeIdx);
-
-    setSelectedRecipe(recipeIdx);
-    switchPage("FullRecipe");
+    const recipeId = model.app.selectedRecipe.id || recipeIdx;
+    switchPage("ShowRecipe", recipeId);
 }
 
 export function removeMyRecipe(recipeIdx) {

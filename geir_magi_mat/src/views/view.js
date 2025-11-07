@@ -8,6 +8,7 @@ import { SuggestRecipeView } from "./pages/SuggestRecipeView.js";
 import { NavBarView } from "./ui/NavBarView.js";
 import { NavMenuView } from "./ui/NavMenuView.js";
 import { FooterView } from "./ui/FooterView.js";
+import { EditRecipeView } from "./pages/EditRecipeView.js";
 
 const page = () => {
     const pageHtml = pageManager();
@@ -38,6 +39,8 @@ function pageManager() {
             return ShowRecipeView();
         case "SuggestRecipe":
             return SuggestRecipeView();
+        case "EditRecipe":
+            return EditRecipeView();
         default:
             return "";
     }

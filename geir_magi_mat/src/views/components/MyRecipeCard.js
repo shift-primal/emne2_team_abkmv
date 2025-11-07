@@ -1,10 +1,6 @@
 import { formatNameToId } from "../../utils/format.js";
-import { updateView } from "../view.js";
 
 export function MyRecipeCard(recipe, recipeIdx) {
-    const id = formatNameToId(recipe.name);
-
-export function MyRecipeCard(recipe) {
     const id = formatNameToId(recipe.name);
 
     return /* html */ `
@@ -20,16 +16,17 @@ export function MyRecipeCard(recipe) {
             </div>
             <div class="myCardBtns">
                 <div
-                    onclick="event.stopPropagation(); removeMyRecipe(${recipeIdx})"
                     class="removeBtn"
+                    onclick="event.preventDefault(); event.stopPropagation(); removeMyRecipe(${recipeIdx})"
                 >
-                    X
+                    <i class="fa-solid fa-trash"></i>
                 </div>
-                <img
-                    onclick="event.stopPropagation(); editMyRecipe(${recipeIdx})"
+                <div
                     class="editBtn"
-                    src="assets/app-img/edit.png"
-                />
+                    onclick="event.preventDefault(); event.stopPropagation(); editMyRecipe(${recipeIdx})"
+                >
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </div>
             </div>
         </a>
     `;
