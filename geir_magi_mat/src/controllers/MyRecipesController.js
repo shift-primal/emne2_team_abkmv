@@ -24,11 +24,35 @@ export function selectRecipe(recipeIdx) {
 }
 
 export function removeMyRecipe(recipeIdx) {
+  // Create the popup element
+  const confirmPopup = document.createElement('div');
+  confirmPopup.className = 'removeMyRecipePopup';
+
+  const confirmMessage = document.createElement('p');
+  confirmMessage.textContent = 'Are you sure you want to delete this recipe?';
+
+  const confirmBtn = document.createElement('button');
+  confirmBtn.textContent = 'Delete';
+  confirmBtn.onclick = () => {
     setSelectedRecipe(recipeIdx);
     model.recipes.splice(recipeIdx, 1);
     console.log(`Recipe "${model.app.selectedRecipe.name}" removed!`);
     model.app.selectedRecipe = null;
     updateView();
+    document.body.removeChild(confirmPopup);
+  };
+
+  const goBackBtn = document.createElement('button');
+  goBackBtn.textContent = 'Go Back';
+  goBackBtn.onclick = () => {
+    document.body.removeChild(confirmPopup);
+  };
+
+  confirmPopup.appendChild(confirmMessage);
+  confirmPopup.appendChild(confirmBtn);
+  confirmPopup.appendChild(goBackBtn);
+
+  document.body.appendChild(confirmPopup);
 }
 
 export function editMyRecipe(recipeIdx) {
