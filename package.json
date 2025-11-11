@@ -1,10 +1,17 @@
 {
-  "type": "module",
-  "devDependencies": {
-    "prettier-plugin-embed": "^0.5.0"
+  "name": "geir_magi_mat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
   "dependencies": {
-    "code-tag": "^1.2.0",
+    "express": "^5.1.0",
     "prettier": "^3.6.2"
   }
 }

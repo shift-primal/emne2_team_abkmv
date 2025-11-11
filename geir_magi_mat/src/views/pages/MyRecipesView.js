@@ -33,7 +33,7 @@ export function MyRecipesView() {
                 <button onclick="switchPage('NewRecipe')" class="btn btn-primary">
                     Legg til oppskrift
                 </button>
-                <button class="btn btn-secondary">Anbefal oppskrift</button>
+                <a href="/suggest-recipe" data-link class="btn btn-secondary">Anbefal oppskrift</a>
             </div>
         </main>
     `;
