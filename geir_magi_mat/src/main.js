@@ -13,3 +13,4 @@ window.selectRecipe = selectRecipe;
 window.handleToggleMenu = handleToggleMenu;
 
 initRouter();
+initPageController();

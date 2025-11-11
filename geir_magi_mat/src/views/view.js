@@ -1,10 +1,13 @@
 import { model } from "../models/index.js";
 import { FrontPageView } from "./pages/FrontPageView.js";
 import { ExploreRecipesView } from "./pages/ExploreRecipesView.js";
-import { NewRecipeView } from "./pages/NewRecipeView.js";
+import { NewRecipeView, setupNewRecipePage } from "./pages/NewRecipeView.js";
 import { MyRecipesView } from "./pages/MyRecipesView.js";
 import { ShowRecipeView } from "./pages/ShowRecipeView.js";
-import { SuggestRecipeView } from "./pages/SuggestRecipeView.js";
+import {
+    SuggestRecipeView,
+    setupSuggestRecipePage,
+} from "./pages/SuggestRecipeView.js";
 import { NavBarView } from "./ui/NavBarView.js";
 import { NavMenuView } from "./ui/NavMenuView.js";
 import { FooterView } from "./ui/FooterView.js";
@@ -20,6 +23,9 @@ export function updateView() {
     switch (model.app.currentPage) {
         case "NewRecipe":
             setupNewRecipePage();
+            break;
+        case "SuggestRecipe":
+            setupSuggestRecipePage();
             break;
     }
 }

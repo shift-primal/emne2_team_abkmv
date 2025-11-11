@@ -1,10 +1,6 @@
-import { formatNameToId } from "../../utils/format.js";
-
-export function MyRecipeCard(recipe) {
-    const id = formatNameToId(recipe.name);
-
+export function MyRecipeCard(recipe, recipeIdx) {
     return /* html */ `
-        <a class="myRecipeCard" href="/recipe/${id}" data-link>
+        <a class="myRecipeCard" href="/recipe/${recipe.id}" data-link>
             <div class="myRecipeCardImgBox">
                 <img class="myRecipeCardImg" alt="${recipe.alt}" src="${recipe.imgUrl}" />
             </div>
@@ -15,8 +11,18 @@ export function MyRecipeCard(recipe) {
                 <h5>Rating: ${recipe.rating}/5 ★</h5>
             </div>
             <div class="myCardBtns">
-                <div class="removeBtn">X</div>
-                <img class="editBtn" src="assets/app-img/edit.png" />
+                <div
+                    class="removeBtn"
+                    onclick="event.preventDefault(); event.stopPropagation(); removeMyRecipe(${recipeIdx})"
+                >
+                    <i class="fa-solid fa-trash"></i>
+                </div>
+                <div
+                    class="editBtn"
+                    onclick="event.preventDefault(); event.stopPropagation(); editMyRecipe(${recipeIdx})"
+                >
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </div>
             </div>
         </a>
     `;

@@ -251,7 +251,7 @@ export const recipeModel = [
         ],
     },
     {
-        id: 12,
+        id: 15,
         date: "2025-10-26",
         name: "Dhal med ovnsbakt flaskegresskar",
         imgUrl: "/assets/recipe-imgs/dhal.jpg",
@@ -362,3 +362,4 @@ export const recipeModel = [
         ],
     },
 ];
+

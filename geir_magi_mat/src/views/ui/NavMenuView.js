@@ -15,6 +15,7 @@ export function NavMenuView() {
             <ul>
                 <li><a href="/my-recipes" data-link>Mine Oppskrifter</a></li>
                 <li><a href="/explore-recipes" data-link>Utforsk Oppskrifter</a></li>
+                <li><a href="/suggest-recipe" data-link>Anbefal oppskrift</a></li>
                 <li><a href="/" data-link>Innstillinger</a></li>
             </ul>
         </div>
