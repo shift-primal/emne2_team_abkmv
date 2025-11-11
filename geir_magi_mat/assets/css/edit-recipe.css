@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 .edit-recipe {
     display: flex;
     flex-direction: column;
@@ -26,3 +27,33 @@
     border: 1px solid var(--color-border);
     border-radius: 4px;
 }
+=======
+.edit-recipe {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-bg);
+    text-align: left;
+    height: 94vh;
+    width: 100%;
+    padding: 16px;
+}
+
+.edit-recipe-form {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 10px;
+    overflow-y: auto;
+}
+
+.edit-recipe-form input,
+.edit-recipe-form textarea,
+.edit-recipe-form select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+}
+>>>>>>> Stashed changes

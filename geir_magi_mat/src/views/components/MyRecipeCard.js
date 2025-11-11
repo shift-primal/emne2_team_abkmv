@@ -13,13 +13,15 @@ export function MyRecipeCard(recipe, recipeIdx) {
             <div class="myCardBtns">
                 <div
                     class="removeBtn"
-                    onclick="event.preventDefault(); event.stopPropagation(); removeMyRecipe(${recipeIdx})"
+                    data-action="remove-recipe"
+                    data-recipe-idx="${recipeIdx}"
                 >
                     <i class="fa-solid fa-trash"></i>
                 </div>
                 <div
                     class="editBtn"
-                    onclick="event.preventDefault(); event.stopPropagation(); editMyRecipe(${recipeIdx})"
+                    data-action="edit-recipe"
+                    data-recipe-idx="${recipeIdx}"
                 >
                     <i class="fa-solid fa-pen-to-square"></i>
                 </div>
