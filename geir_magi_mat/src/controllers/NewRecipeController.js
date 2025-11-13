@@ -1,3 +1,6 @@
+import { model } from "../models/index.js";
+import { switchPage } from "./PageController.js";
+
 // form data
 export const recipeData = {
     name: "",
@@ -46,16 +49,36 @@ export function submitRecipe() {
         return false;
     }
 
+    // Generate new ID (max existing ID + 1)
+    const maxId = model.recipes.reduce((max, r) => Math.max(max, r.id), 0);
+    const newId = maxId + 1;
+
+    // Get current date in YYYY-MM-DD format
+    const today = new Date();
+    const dateStr = today.toISOString().split('T')[0];
+
     const recipe = {
+        id: newId,
+        date: dateStr,
         name: recipeData.name,
         region: recipeData.region,
-        ingredients: recipeData.ingredients,
-        steps: recipeData.steps,
+        imgUrl: "/assets/recipe-imgs/default.jpg",
+        alt: `Bilde av ${recipeData.name}`,
         rating: recipeData.rating,
+        comment: "",
+        portionSize: 4,
+        description: "",
+        ingredients: recipeData.ingredients.map(ing => ({
+            ingredient: ing,
+            amount: null,
+            metric: "stk"
+        })),
+        recipeSteps: recipeData.steps,
     };
 
+    model.recipes.push(recipe);
     console.log("recipe submitted:", recipe);
-    // TODO: save to  storage
+    switchPage("MyRecipes");
     return true;
 }
 

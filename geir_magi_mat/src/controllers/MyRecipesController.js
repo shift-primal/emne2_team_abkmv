@@ -2,7 +2,7 @@ import { model } from "../models/index.js";
 import { updateView } from "../views/view.js";
 import { switchPage } from "./PageController.js";
 
-function setSelectedRecipe(recipeIdx) {
+export function setSelectedRecipe(recipeIdx) {
     model.app.selectedRecipe = model.recipes[recipeIdx];
 }
 

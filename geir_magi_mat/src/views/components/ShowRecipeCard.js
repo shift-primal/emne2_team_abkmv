@@ -1,6 +1,7 @@
 import { formatNameToId } from "../../utils/format.js";
 
 export function ShowRecipeCard(recipe) {
+    if (!recipe) return "";
     return /* html */ `
         <div class="showRecipeCard" id="${formatNameToId(recipe.name)}">
             <div class="showRecipeText">

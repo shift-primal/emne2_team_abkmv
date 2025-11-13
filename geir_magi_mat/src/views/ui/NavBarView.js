@@ -5,7 +5,7 @@ export function NavBarView() {
             <a href="/" data-link id="logo">
                 <h1>Middags-Magi</h1>
             </a>
-            <div onclick="handleToggleMenu()"><i class="fa-solid fa-bars fa-xl"></i></div>
+            <div data-action="toggle-menu"><i class="fa-solid fa-bars fa-xl"></i></div>
         </nav>
     `;
 }

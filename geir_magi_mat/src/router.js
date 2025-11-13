@@ -6,12 +6,10 @@ const routes = {
     "/explore-recipes": "ExploreRecipes",
     "/recipe/:id": "ShowRecipe",
     "/suggest-recipe": "SuggestRecipe",
-    "/edit-recipe/:id": "EditRecipe",
 };
 
 const handleLocation = () => {
     const path = window.location.pathname;
-    console.log(path);
 
     // Sjekk for vanlig route først (statisk)
     if (routes[path]) {
@@ -34,7 +32,7 @@ const handleLocation = () => {
         }
     }
 
-    // Default route (frontpage) hvis ingen matcher
+    // Default route (frontpage) his ingen matcher
     switchPage("FrontPage");
 };
 

@@ -1,6 +1,7 @@
 import { formatNameToId } from "../../utils/format.js";
 
 export function RecipeCard(recipe) {
+    if (!recipe) return "";
     const id = formatNameToId(recipe.name);
     return /* html */ `
         <a class="recipeCard" href="/recipe/${id}" data-link>

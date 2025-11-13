@@ -2,7 +2,7 @@ import { model } from "../../models/index.js";
 import { MyRecipeCard } from "../components/MyRecipeCard.js";
 
 function displayRecipes() {
-    const recipeData = model.app.searchResults.length > 1 ? model.app.searchResults : model.recipes;
+    const recipeData = model.app.searchResults.length > 0 ? model.app.searchResults : model.recipes;
 
     console.log(recipeData);
 
@@ -33,7 +33,7 @@ export function MyRecipesView() {
                 <button onclick="switchPage('NewRecipe')" class="btn btn-primary">
                     Legg til oppskrift
                 </button>
-                <button class="btn btn-secondary">Anbefal oppskrift</button>
+                <a href="/suggest-recipe" data-link class="btn btn-secondary">Anbefal oppskrift</a>
             </div>
         </main>
     `;
