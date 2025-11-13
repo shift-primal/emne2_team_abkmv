@@ -8,7 +8,7 @@ export function ExploreRecipesView() {
             <div class="hero-section">
                 <h2>Utforsk oppskrifter</h2>
                 <div class="hero-section"></div>
-                ${getRecipePage()} ${pageButtons()}
+                ${getRecipePage()}
             </div>
         </main>
     `;
@@ -17,19 +17,10 @@ export function ExploreRecipesView() {
 export function getRecipePage() {
     return /* html */ `
         <div class="recipeCard-group">
-            ${RecipeCard(findRecipeByName(model.recipes, "lasagne"))}
+            ${RecipeCard(findRecipeByName(model.recipes, "Lasagne"))}
         </div>
         <div class="recipeCard-group">
-            ${RecipeCard(findRecipeByName(model.recipes, "kylling tikka masala"))}
-        </div>
-    `;
-}
-
-function pageButtons() {
-    return /* html */ `
-        <div class="page-buttons">
-            <button onclick="previousPage()">Previous</button>
-            <button onclick="nextPage()">Next</button>
+            ${RecipeCard(findRecipeByName(model.recipes, "Kylling Tikka Masala"))}
         </div>
     `;
 }

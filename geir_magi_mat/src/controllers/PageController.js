@@ -16,11 +16,12 @@ import {
 } from "./EditRecipeController.js";
 import { handleToggleMenu } from "./NavMenuController.js";
 import { findRecipes } from "./SuggestRecipeController.js";
+import { formatNameToId } from "../utils/format.js";
 
 export function switchPage(newPage, data = null) {
     model.app.currentPage = newPage;
     if (newPage === "ShowRecipe" && data) {
-        const originalRecipe = model.recipes.find((recipe) => recipe.id == data);
+        const originalRecipe = model.recipes.find((recipe) => formatNameToId(recipe.name) === data);
         model.app.selectedRecipe = { ...originalRecipe };
     }
     updateView();
@@ -28,7 +29,7 @@ export function switchPage(newPage, data = null) {
 
 function handleAction(e) {
     const target = e.target.closest("[data-action]");
-    console.log(e.target.data)
+    console.log(e.target.dataset)
     if (!target) return;
 
     const action = target.dataset.action;
@@ -36,7 +37,8 @@ function handleAction(e) {
     switch (action) {
         case "select-recipe":
             e.preventDefault();
-            setSelectedRecipe(recipeIdx)
+            setSelectedRecipe(target.dataset.recipeIdx);
+            break;
         case "search-recipes":
             searchRecipes();
             break;

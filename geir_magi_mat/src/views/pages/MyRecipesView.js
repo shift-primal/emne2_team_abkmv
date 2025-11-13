@@ -2,7 +2,7 @@ import { model } from "../../models/index.js";
 import { MyRecipeCard } from "../components/MyRecipeCard.js";
 
 function displayRecipes() {
-    const recipeData = model.app.searchResults.length > 1 ? model.app.searchResults : model.recipes;
+    const recipeData = model.app.searchResults.length > 0 ? model.app.searchResults : model.recipes;
 
     console.log(recipeData);
 

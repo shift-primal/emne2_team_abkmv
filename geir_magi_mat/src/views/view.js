@@ -4,6 +4,7 @@ import { ExploreRecipesView } from "./pages/ExploreRecipesView.js";
 import { NewRecipeView, setupNewRecipePage } from "./pages/NewRecipeView.js";
 import { MyRecipesView } from "./pages/MyRecipesView.js";
 import { ShowRecipeView } from "./pages/ShowRecipeView.js";
+import { EditRecipeView } from "./pages/EditRecipeView.js";
 import {
     SuggestRecipeView,
     setupSuggestRecipePage,
@@ -42,6 +43,8 @@ function pageManager() {
             return MyRecipesView();
         case "ShowRecipe":
             return ShowRecipeView();
+        case "EditRecipe":
+            return EditRecipeView();
         case "SuggestRecipe":
             return SuggestRecipeView();
         default:

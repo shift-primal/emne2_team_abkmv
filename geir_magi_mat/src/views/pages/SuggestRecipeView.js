@@ -39,13 +39,13 @@ function displayRecipes() {
     const recipeData = suggestionState.foundRecipes.length > 0 ? suggestionState.foundRecipes : null;
 
     if (recipeData) {
-    return recipeData
-        .map((recipe, idx) => {
-            return /* html */ ` <div class="recipeCard-group">${RecipeCard(recipe, idx)}</div> `;
-        })
-        .join("");
+        return recipeData
+            .map((recipe, idx) => {
+                return /* html */ ` <div class="recipeCard-group">${RecipeCard(recipe, idx)}</div> `;
+            })
+            .join("");
     } else {
-        return "<p>Ingen oppskrifter funnet.</p>"
+        return "<p>Ingen oppskrifter funnet.</p>";
     }
 
 }
