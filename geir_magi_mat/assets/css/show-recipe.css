@@ -90,6 +90,7 @@
 
 .decrease-portion-btn {
     font-size: 2rem;
+    cursor: pointer;
 }
 
 .portion-size {
@@ -99,4 +100,5 @@
 
 .increase-portion-btn {
     font-size: 2rem;
+    cursor: pointer;
 }
